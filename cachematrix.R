@@ -14,8 +14,10 @@ get <-  function () {x}
     list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
-# # Esta segunda función calcula la inversa de la "matriz" especial creada por
-# # makeCacheMatrix arriba.
+# # cacheSolve is a function that computes the inverse of the special "array"
+# # returned by makeCacheMatrix above. If the inverse has already been calculated
+# # (and the array has not changed), then the cachesolve should retrieve the
+# # reverse cache
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -30,7 +32,7 @@ inv <- x$getInverse()
        x$setInverse(inv)
        inv
 }
--------comproband----------
+------- checking ----------
 > pmatrix <- makeCacheMatrix(matrix(1:4, nrow = 2, ncol = 2))
 > pmatrix$get()
      [,1] [,2]
